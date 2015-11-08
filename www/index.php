@@ -1,0 +1,4 @@
+azaza
+<?php
+	echo "lolka"
+?>
