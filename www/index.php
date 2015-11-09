@@ -1,20 +1,20 @@
+<?php
+	include "php/log_in.php";
+?>
 <!DOCTYPE HTML> 
 <html>
 <head>
 <link rel="stylesheet" href="php/style.css">
 </head>
 
-<?php
-	include "php/log_in.php";
-?>
 
 <body background="source/fon.png"> 
 <form class="regform" method="post" action="index.php"> 
 	<img src="Image URL" alt="Logo"/>
 	<h2>Быки и коровы</h2>
-   <input id = "login" type="text" required placeholder="Логин" class="form-control" name="login">
+   <input id = "login" type="text" required placeholder="Логин" class="form-control" name="login" autocomplete="off">
    <br><br>
-   <input type="text" required placeholder="Пароль" class="form-control" name="password">
+   <input type="text" required placeholder="Пароль" class="form-control" name="password" autocomplete="off">
    <br><br>
    <p class="submit"><button type="submit">Войти</button></p>		
    <br>

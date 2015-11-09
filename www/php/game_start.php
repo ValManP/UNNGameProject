@@ -16,7 +16,14 @@
 	
 	$history = array();
 	$_SESSION["history"] = $history;
-	// TODO: sql request to create 1 row in GAMES_T database
+	
+	$user_id = $_SESSION["user_id"];
+	
+	$retval = mysql_query("INSERT INTO games_t(user_id, unknown_number, time) VALUES($user_id, $unknown_number, NOW())", $db);
+	$result = mysql_query("SELECT MAX(game_id) game_id FROM games_t WHERE user_id = $user_id", $db);
+	$game_id = mysql_fetch_array($result);
+	
+	$_SESSION["game_id"] = $game_id["game_id"];
 	
 	header("Location: game.php");
 ?>

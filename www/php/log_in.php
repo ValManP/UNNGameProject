@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 $db = mysql_connect ("bullsandcows", "root", "");
 mysql_select_db("game_db", $db);
 $password = $login = "";
@@ -19,16 +20,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$password = md5($pass);                 
 		$result = mysql_query ("SELECT * FROM users_t WHERE user_name='$login' AND user_password='$password'", $db) or die("Invalid query: " . mysql_error()); 
 		$myrow = mysql_fetch_array ($result);
-		$id = $myrow['id'];
+		
 		$count=mysql_num_rows($result);
 
 		if ($count==1)
 		{
 			
-			$_SESSION['password']=$myrow['password']; 
-			$_SESSION['login']=$myrow['login']; 
+			//$_SESSION['user_password']=$myrow['user_password']; 
+			$_SESSION['user_name']=$myrow['user_name'];
 
-			$_SESSION['id']=$myrow['id'];
+			$_SESSION['user_id']=$myrow['user_id'];
 
 			//header("location: home.php");
 			echo ('<script type="text/javascript"> location="php/home.php"</script>;');
@@ -36,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		else
 		{
 			//header("location: ../index.php");
-			echo ('<script> alert("Неправильный логин или пароль")</script>;');
+			echo ('<script> alert("РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ Р»РѕРіРёРЅ РёР»Рё РїР°СЂРѕР»СЊ")</script>;');
 		}
 	}
 }

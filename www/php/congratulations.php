@@ -10,6 +10,14 @@
 		$history = array();
 	
 	$score = count($history);
+	
+	$game_id = $_SESSION["game_id"];
+	
+	$retval = mysql_query("UPDATE games_t SET score = $score WHERE game_id = $game_id", $db);
+	foreach ($history as $value)
+	{
+		$retval = mysql_query("INSERT INTO gametab_t(game_id, value) VALUES($game_id, $value)", $db);
+	}
 ?>
 <!DOCTYPE HTML>
 <html>
