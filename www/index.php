@@ -9,7 +9,7 @@
 ?>
 
 <body background="source/fon.png"> 
-<form class="regform" method="post" action="php/log_in.php"> 
+<form class="regform" method="post" action="index.php"> 
 	<img src="Image URL" alt="Logo"/>
 	<h2>Быки и коровы</h2>
    <input id = "login" type="text" required placeholder="Логин" class="form-control" name="login">

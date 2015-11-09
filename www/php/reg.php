@@ -30,8 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		    {
 			  die('Could not enter data: ' . mysql_error());
 		    }
-			header("location: home.php");
-
+			//header("location: home.php");
+			echo ('<script type="text/javascript"> location="home.php"</script>;');
 		}
 		else
 		{

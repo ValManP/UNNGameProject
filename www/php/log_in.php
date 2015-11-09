@@ -2,7 +2,7 @@
 $db = mysql_connect ("bullsandcows", "root", "");
 mysql_select_db("game_db", $db);
 $password = $login = "";
-
+$errMess = "";
  if(! $db )
    {
       die('Could not connect: ' . mysql_error());
@@ -30,13 +30,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 			$_SESSION['id']=$myrow['id'];
 
-			header("location: home.php");
+			//header("location: home.php");
+			echo ('<script type="text/javascript"> location="php/home.php"</script>;');
 		}
 		else
 		{
-			
-			header("location: index.php");
-			//echo "<script>alert('Неправильный логин или пароль');</script>";
+			//header("location: ../index.php");
+			echo ('<script> alert("Неправильный логин или пароль")</script>;');
 		}
 	}
 }
