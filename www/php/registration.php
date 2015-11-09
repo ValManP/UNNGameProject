@@ -7,7 +7,7 @@
 	include "reg.php";
 ?>
 <body background="source/fon.png"> 
-<form class="regform"  method="post" action="home.php"> 
+<form class="regform"  method="post" action="reg.php"> 
 	<img src="Image URL" alt="Logo"/>
 	<h2>Регистрация</h2>
    <input id = "login" type="text" required placeholder="Логин" class="form-control" name="login">

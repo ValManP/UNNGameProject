@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				
 		$result = mysql_query ("SELECT * FROM users_t WHERE user_name='$login'", $db) or die("Invalid query: " . mysql_error());  
 		$count=mysql_num_rows($result);
+		//echo $result;
 		//mysql_free_result($result);
 		if ($count==0)
 		{
