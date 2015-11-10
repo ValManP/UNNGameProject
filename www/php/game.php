@@ -18,7 +18,7 @@
 				<div class="game_form">
 					<form name="guess_form" action="game.php" method="post">
 						<p style="font-size: 30px; font-weight: bold; margin: 0;">Угадать число</p><br/>
-						<input type="text" name="user_guess" value="" size="4" maxlength="4" autocomplete="off" class="user_guess"><br/>
+						<input type="text" name="user_guess" maxlength="4" autocomplete="off" class="user_guess"><br/>
 						<input type="submit" value="Угадать"><br/>
 					</form>
 					<form name="give_up" action="give_up.php">

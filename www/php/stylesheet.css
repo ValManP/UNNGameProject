@@ -54,14 +54,6 @@ body
 	text-align: center;
 }
 
-form[name=guess_form]
-{
-}
-
-form[name=give_up]
-{
-}
-
 .user_guess
 {
 	font-size: 60px;
@@ -71,6 +63,7 @@ form[name=give_up]
 	padding: 5px;
 	
 	text-align: center;
+	width: 3em;
 	
 	background-color: #ddd;
 }
@@ -129,12 +122,6 @@ input[type="submit"]:hover
 	font-weight: bold;
 	color: black;
 	
-	position:absolute;
-    top:10%;
-    right:0;
-    left:45%;
-	width: 400px;
-    height: 30px;
 	text-align: center;
 	
 	padding: 10px;
