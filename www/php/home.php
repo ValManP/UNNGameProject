@@ -1,3 +1,7 @@
+<?php
+	session_start(); 
+	$login = $_SESSION["user_name"];
+?>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -21,5 +25,7 @@
 			</div>
 		</div><br>
 		<a href="game_start.php"><div class="div_button">Начать игру</div></a><br>
+		<h1 class="login"><?php echo $login; ?></h1>
+		<a href="../index.php"><div class="div_button_sign_out">Выйти</div></a><br>
 	</body>
 </html>

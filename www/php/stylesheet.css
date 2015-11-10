@@ -129,6 +129,14 @@ input[type="submit"]:hover
 	font-weight: bold;
 	color: black;
 	
+	position:absolute;
+    top:10%;
+    right:0;
+    left:45%;
+	width: 400px;
+    height: 30px;
+	text-align: center;
+	
 	padding: 10px;
 	
 	display: inline-block;
@@ -147,4 +155,18 @@ input[type="submit"]:hover
     -moz-border-radius:10px;
     -o-border-radius:10px;
     -ms-border-radius:10px;
+}
+
+.login
+{	
+	position:absolute;
+    top:15%;
+    left:5%;
+}
+
+.div_button_sign_out
+{	
+	position:absolute;
+    top:25%;
+    left:5%;
 }

@@ -28,7 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			
 			//$_SESSION['user_password']=$myrow['user_password']; 
 			$_SESSION['user_name']=$myrow['user_name'];
-
 			$_SESSION['user_id']=$myrow['user_id'];
 
 			//header("location: home.php");
