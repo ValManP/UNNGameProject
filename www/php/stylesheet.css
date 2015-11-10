@@ -1,37 +1,31 @@
 *
 {
-	font-family: Courier;
-}
-
-html
-{
-	width: 100%;
-	height: 100%;
+	font-family: Comic Sans MS, Arial;
 }
 
 body
 {
-	width: 100%;
-    height: 100%;
-    margin: 0px;
+	margin: 0;
 }
+
 
 .header
 {
-	width: 100%;
+	width: 960px;
     height: 100px;
-	
 	background-color: #7DFDFE;
+	
+	margin: 0 auto;
 }
 
 .content
 {
-	width: 100%;
+	width: 960px;
+	margin: 0 auto;
 }
 
 .top
 {
-	width: 100%;
 	height: 10%;
 	
 	text-align: center;
@@ -43,23 +37,29 @@ body
 
 .middle
 {
-	width: 100%;
-	text-align: center;
-}
-
-.bottom
-{
-	width: 100%;
 }
 
 .game_form
 {
-	margin: 0 auto;
-	display: inline-block;
-	
 	border: 2px solid black;
-	border-radius: 5px;
-	padding: 15px;
+	
+	width: 222px;
+    margin-left: 354px;
+    padding: 13px;
+    float: left;
+}
+
+.game_form > form
+{
+	text-align: center;
+}
+
+form[name=guess_form]
+{
+}
+
+form[name=give_up]
+{
 }
 
 .user_guess
@@ -68,42 +68,60 @@ body
 	font-weight: bold;
 	
 	border: 2px solid black;
-	border-radius: 5px;
 	padding: 5px;
+	
+	text-align: center;
+	
+	background-color: #ddd;
+}
+.user_guess:focus
+{
+	outline: none;
 }
 
 .history
 {
-	width: 11em;
-	height: 250px;
+	border: 2px solid black;
+	padding: 5px;
+	
 	overflow-y: scroll;
-	
-	margin: auto;
-	margin-top: 30px;
-	
-	background-color: #FFE05D;
-	
+	background-color: #FFEE67;	
 	font-size: 20px;
+	
+	width: 12em;
+	height: 340px;
+	
+	float: right;
+}
+
+.clear
+{
+	clear: both;
 }
 
 input[type="submit"]
 {
+	cursor: pointer;
+	
 	background-color: yellow;
 	
 	font-size: 20px;
 	font-weight: bold;
 	
 	border: 2px solid black;
-	border-radius: 5px;
 	
 	margin-top: 15px;
 	padding: 10px;
 }
 
+input[type="submit"]:hover
+{
+	background-color: red;
+}
+
 .div_button
 {	
 	border: 2px solid black;
-	border-radius: 5px;
 	
 	background-color: yellow;
 	
@@ -114,4 +132,19 @@ input[type="submit"]
 	padding: 10px;
 	
 	display: inline-block;
+}
+
+.div_button:hover
+{
+	background-color: red;
+}
+
+.game_form, .user_guess, input[type="submit"], .div_button, .history
+{
+	border-radius:10px;
+    -webkit-border-radius:10px;
+    -khtml-border-radius:10px;
+    -moz-border-radius:10px;
+    -o-border-radius:10px;
+    -ms-border-radius:10px;
 }

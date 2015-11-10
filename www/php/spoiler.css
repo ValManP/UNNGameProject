@@ -1,0 +1,75 @@
+.spoiler >  input + .box > blockquote
+{
+	display: none;
+}
+.spoiler >  input:checked + .box > blockquote
+{
+	display: block;
+}
+.spoiler >  input[type="checkbox"]
+{
+	cursor: pointer;
+	border-color:transparent!important;
+	border-style:none!important;
+	background:transparent none!important;
+	position:relative;
+	z-index:1;
+	margin:-20px 0 -30px -300px;
+}
+.spoiler >  input[type="checkbox"]:focus
+{
+	outline:none;
+}
+.spoiler span.close, .spoiler span.open
+{
+	padding-left:22px;
+	color: #00f!important;
+	text-decoration: underline;
+}
+.spoiler >  input +  .box > span.close
+{
+	display: none;
+}
+.spoiler >  input:checked +  .box > span.close
+{
+	background: url(../source/minus.png) 4px 60% no-repeat;
+	display: inline;
+}
+.spoiler >  input:checked  + .box > span.open
+{
+	display: none;
+}
+.spoiler >  input +  .box >  span.open
+{
+	background: url(../source/plus.png) 4px  60% no-repeat;
+	display: inline;
+}
+.spoiler blockquote, .spoiler
+{
+    padding: 5px;
+    border-radius:15px;
+    -webkit-border-radius:15px;
+    -khtml-border-radius:15px;
+    -moz-border-radius:15px;
+    -o-border-radius:15px;
+    -ms-border-radius:15px;
+}
+.spoiler
+{
+	display: inline-block;
+    overflow-x:hidden;
+	overflow-y:hidden;
+    box-shadow: 0px 3px 8px #808080;
+    border:#E5E5E5 solid 2px;
+    -webkit-box-shadow:0px 3px 8px #808080;
+    -khtml-box-shadow:0px 3px 8px #808080;
+    -moz-box-shadow:0px 3px 8px #808080;
+    -ms-box-shadow:0px 3px 8px #808080;
+}
+.spoiler blockquote
+{
+	padding-top: 8px;
+	margin: 12px 0px 0px 0px;
+	min-height: 23px;
+	border:#CDCDCD 2px dashed;
+}

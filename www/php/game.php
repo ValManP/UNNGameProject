@@ -25,10 +25,11 @@
 						<input type="submit" value="Сдаться">
 					</form>
 				</div>
-			</div>
-			
-			<div class="bottom">
-				<div class="history"><?php print_history(); ?></div>
+				<div class="history">
+					<?php print_history(); ?>
+				</div>
+				<div class="clear">
+				</div>
 			</div>
 		</div>
 		

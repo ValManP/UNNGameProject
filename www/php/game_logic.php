@@ -25,25 +25,51 @@
 				$error_msg = "Введите 4 значное число!"; 
 			else
 			{
-				// Посчитать количество быков в числе пользователя
-				for ($i = 0; $i < 4; $i = $i + 1)
-					if ($unknown_number[$i] == $user_guess[$i])
-						$bull_count = $bull_count + 1;
+				// Проверить, что были введены 4 разные цифры и первая цифра не 0
+				if ($user_guess[0] == "0")
+					$error_msg = "Число не должно начинаться на цифру 0!";
+				else
+					for ($i = 0; $i < 3; $i = $i + 1)
+					{
+						for ($j = $i + 1; $j < 4; $j = $j + 1)
+						{
+							if ($user_guess[$i] == $user_guess[$j])
+							{
+								$error_msg = "Все цифры числа должны быть различными!";
+								break;
+							}
+							if ($error_msg != "") break;
+						}
+					}
+				
+				if ($error_msg == "")
+				{
+					// Посчитать количество быков в числе пользователя
+					for ($i = 0; $i < 4; $i = $i + 1)
+						if ($unknown_number[$i] == $user_guess[$i])
+							$bull_count = $bull_count + 1;
+						
+					// Подсчитать количество коров в числе пользователя
+					for ($i = 0; $i < 4; $i = $i + 1)
+						for ($j = 0; $j < 4; $j = $j + 1)
+							if ($unknown_number[$i] == $user_guess[$j])
+								$cow_count = $cow_count + 1;
+					$cow_count = $cow_count - $bull_count;
 					
-				// Подсчитать количество коров в числе пользователя
-				for ($i = 0; $i < 4; $i = $i + 1)
-					for ($j = 0; $j < 4; $j = $j + 1)
-						if ($unknown_number[$i] == $user_guess[$j])
-							$cow_count = $cow_count + 1;
-				$cow_count = $cow_count - $bull_count;
-				
-				// Обновить историю вводимых чисел
-				$history[] = $user_guess . $bull_count . $cow_count;
-				$_SESSION["history"] = $history;
-				
-				// Проверка на выигрыш игрока
-				if ($bull_count == 4)
-					header("Location: congratulations.php");
+					// Обновить историю вводимых чисел
+					$new_attempt = $user_guess . $bull_count . $cow_count;
+					$history[] = $new_attempt;
+					$_SESSION["history"] = $history;
+					
+					// Внести попытку игрока в базу данных
+					include("connect_db.php");
+					$game_id = $_SESSION["game_id"];
+					$retval = mysql_query("INSERT INTO gametab_t(game_id, value) VALUES($game_id, $new_attempt)", $db);
+					
+					// Проверка на выигрыш игрока
+					if ($bull_count == 4)
+						header("Location: congratulations.php");
+				}
 			}
 		}
 	}
@@ -83,8 +109,8 @@
 		{
 			if (count($history) > 0)
 				echo $user_guess . ": " .
-					 $bull_count . "<img src=\"../source/bull.png\" width=\"30px\" height=\"40px\"/> " .
-					 $cow_count . "<img src=\"../source/cow.png\" width=\"30px\" height=\"35px\"/>";
+					 $bull_count . "<img src=\"../source/bull.png\" width=\"36px\" height=\"50px\"/> " .
+					 $cow_count . "<img src=\"../source/cow.png\" width=\"36px\" height=\"42px\"/>";
 		}
 		else
 			echo "<font color=\"red\">" . $error_msg . "</font>";
