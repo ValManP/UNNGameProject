@@ -5,16 +5,20 @@ h2 {
 	font-size: 30px;
 }
 
-a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 5px 10px;
-  letter-spacing: 1px;
-  margin: 0 20px;
-  font-size: 24px;
-  font-family: 'Fredoka One', cursive;
-  transition: all 0.3s ease-in-out;
-}
+#ref {
+	font-family: cursive, comic sans ms, serif;
+	font-size: 18px;
+	text-decoration: none;
+ -moz-transition: color 0.2s 0.02s ease;
+ -o-transition: color 0.2s 0.02s ease;
+ -webkit-transition: color 0.2s 0.02s ease;
+ color:#8000ff;
+ 
+ }
+ 
+#ref:hover {
+ color: #ff6f5b;
+ }
 
 .regform {
 	 position:absolute;
@@ -55,20 +59,14 @@ input:focus{
     color: #333;
 }
 
-button{ 
-font-weight: 700; 
-color: white; 
-text-decoration: none; 
-padding: .8em 1em calc(.8em + 3px); 
-border-radius: 3px; 
-background: rgb(64,199,129); 
-box-shadow: 0 -3px rgb(53,167,110) inset;
-transition: 0.2s; 
+#login_button {
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: rgb(212,75,56); /* фон кнопки */
+  padding: .7em 1.5em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
 } 
+#login_button:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
+#login_button:active { background: rgb(152,15,0); } /* при нажатии */
 
-button:hover { background: rgb(53, 167, 110); } 
-
-button:active { 
-background: rgb(33,147,90); 
-box-shadow: 0 3px rgb(33,147,90) inset; 
-}

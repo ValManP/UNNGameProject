@@ -5,10 +5,17 @@
 <html>
 <head>
 <link rel="stylesheet" href="php/style.css">
+<style>
+  body { 
+	background: url(source/background.jpg) no-repeat;
+	background-size: 100%;	
+	}
+</style>
+<title>Быки и коровы</title>
 </head>
 
 
-<body background="source/fon.png"> 
+<body> 
 <form class="regform" method="post" action="index.php"> 
 	<img src="Image URL" alt="Logo"/>
 	<h2>Быки и коровы</h2>
@@ -16,9 +23,9 @@
    <br><br>
    <input type="password" required placeholder="Пароль" class="form-control" name="password" autocomplete="off" type="password">
    <br><br>
-   <p class="submit"><button type="submit">Войти</button></p>		
-   <br>
-   <a id="s1" href="php/registration.php" target="_self" >Регистрация</a>
+   <button id = "login_button" type="submit">Войти</button>	
+   <br><br>
+   <a id="ref" href="php/registration.php" >РЕГИСТРАЦИЯ</a>
 </form>
 
 

@@ -2,11 +2,18 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
+<style>
+  body { 
+	background: url(../source/background.jpg) no-repeat;
+	background-size: 100%;	
+	}
+</style>
+<title>Регистрация</title>
 </head>
 <?php 
 	include "reg.php";
 ?>
-<body background="source/fon.png"> 
+<body> 
 <form class="regform"  method="post" action="registration.php"> 
 	<img src="Image URL" alt="Logo"/>
 	<h2>Регистрация</h2>
@@ -14,7 +21,8 @@
    <br><br>
    <input type="text" required placeholder="Пароль" class="form-control" name="password" autocomplete="off" type="password">
    <br><br>
-   <p class="submit"><button type="submit">Зарегестрироваться</button></p>		
+   <button id = "login_button" type="submit">Зарегестрироваться</button>	
+   
 </form>
 
 
