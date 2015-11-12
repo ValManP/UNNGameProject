@@ -44,7 +44,7 @@
 	position:absolute;
     top:20%;
     left:55%;
-	text-align: center;
+	text-align: middle;
 	vertical-align: middle;
 	
 	width: 400px;
@@ -56,16 +56,4 @@
 	margin-top:30%;
 	text-align: center;
 	vertical-align: top;
-}
-
-.spoiler_hardcore {
-	margin-top:15%;
-	text-align: center;
-	vertical-align: middle;
-}
-
-.spoiler_simple {
-	margin-top:15%;
-	text-align: center;
-	vertical-align: bottom;
 }

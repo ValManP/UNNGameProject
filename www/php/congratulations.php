@@ -25,7 +25,7 @@
 		Поздравляем, вы угадали число! :)<br/>
 		<img src="../source/congratulations.png"/><br/>
 		Вы угадали загаданное число: <?php echo $unknown_number; ?>.<br/>
-		Вы сделали попыток: <?php echo $score; ?>.<br/><br/>
+		Вы сделали попыток: <?php echo $score; ?>.<br/>
 		<a href="home.php" class="link_button">Вернуться на домашнюю страницу</a>
 	</body>
 </html>

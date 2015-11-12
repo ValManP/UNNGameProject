@@ -25,7 +25,7 @@
 		Вы сдались. :(<br/>
 		<img src="../source/give_up.png"/><br/>
 		Было загадано число: <?php echo $unknown_number; ?>.<br/>
-		Вы сделали попыток: <?php echo $score; ?>.<br/><br/>
+		Вы сделали попыток: <?php echo $score; ?>.<br/>
 		<a href="home.php" class="link_button">Вернуться на домашнюю страницу</a>
 	</body>
 </html>
