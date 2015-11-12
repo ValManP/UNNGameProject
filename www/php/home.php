@@ -1,6 +1,8 @@
 <?php
 	session_start(); 
 	$login = $_SESSION["user_name"];
+	
+	include("show_stat.php");
 ?>
 <html>
 	<head>
@@ -21,30 +23,20 @@
 		<div class="stat_form">
 			<!-- После класса можно изменять индивидуальные свойства элемента: -->
 			<a href="game_start.php" class="link_button" style="margin-left: 40%;">Начать игру</a><br>
+			<div class="left">
+				<div class="game_stat" style = "width:110px; height:230px;">
+						<?php while ($row = mysql_fetch_array ($result)){ ?>
+						<?php echo '<button type="submit" class="btn" name="game" value="'.$row['game_id'].'">Игра '.$row['game_id'].'</button><br/><br/>';}?>
+						<!--<button type="submit" class="btn" name="game" value="1">Игра 1.</button>-->
+				</div>
+			</div>
 			
-			<!-- После класса можно изменять индивидуальные свойства элемента: -->
-			<div class="spoiler_simple" style="margin: 10px; color: red;">
-				<label>
-					<input type="checkbox"/>
-					<span class="btn">Игра 1</span>
-					<div class="text">
-						Количество попыток: СТОЛЬКО<br/>
-						1. ТАКАЯ<br/>
-						2. СЯКАЯ<br/>
-					</div>
-				</label>
+			<div class="right">
+				<div class="game_stat" style = "width:330px; height:230px; margin-left: 10%;">
+					<p><?php echo $stat; ?>:</p>
+				</div>
 			</div>
-			<div class="spoiler_simple" style="margin: 10px;">
-				<label>
-					<input type="checkbox"/>
-					<span class="btn">Игра 2</span>
-					<div class="text">
-						Количество попыток: ВОТ СТОЛЬКО<br/>
-						1. ТУДА<br/>
-						2. СУДА<br/>
-					</div>
-				</label>
-			</div>
+			
 		</div>
 	</body>
 </html>

@@ -1,8 +1,4 @@
-.spoiler_simple
-{
-display: block;
-}
-.spoiler_simple .btn
+.btn
 {
 	display: inline-block;
 	border: none;
