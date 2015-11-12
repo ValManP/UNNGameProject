@@ -1,13 +1,8 @@
 <!DOCTYPE HTML> 
 <html>
 <head>
+<link rel="stylesheet" href="stylesheet.css">
 <link rel="stylesheet" href="style.css">
-<style>
-  body { 
-	background: url(../source/background.jpg) no-repeat;
-	background-size: 100%;	
-	}
-</style>
 <title>Регистрация</title>
 </head>
 <?php 

@@ -69,17 +69,3 @@ input:focus{
 } 
 #login_button:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
 #login_button:active { background: rgb(152,15,0); } /* при нажатии */
-
-.login
-{	
-	position:absolute;
-    top:15%;
-    left:5%;
-}
-
-.link_button_sign_out
-{	
-	position:absolute;
-    top:25%;
-    left:5%;
-}

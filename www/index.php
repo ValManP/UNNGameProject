@@ -5,12 +5,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="php/style.css">
-<style>
-  body { 
-	background: url(source/background.jpg) no-repeat;
-	background-size: 100%;	
-	}
-</style>
+<link rel="stylesheet" href="php/stylesheet.css">
 <title>Ѕыки и коровы</title>
 </head>
 
