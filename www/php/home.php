@@ -5,27 +5,34 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="stylesheet" href="spoiler.css">
+		<link rel="stylesheet" href="spoiler_simple.css">
+		<link rel="stylesheet" href="spoiler_hardcore.css">
 		<title>Ваша домашняя страница</title>
 	</head>
 	<body>
-		<div class="spoiler">
-			<!-- width: *px; - подгодяется вручную по длине текста под спойлером, height: *px; - по размеру шрифта -->
-			<input style="width:500px;height:45px;" type="checkbox" tabindex="-1" >
-			<div class="box">
-				<span class=close>1. 15:00 10.11.2015</span><span class=open>1. 15:00 10.11.2015</span>
-				<blockquote class="Untext">
-					Загаданное число:<br>
-					<ol style="margin: 0; padding-left: 30px;">
-						<li>1234: 1 бык 1 коров.</li>
-						<li>и так далее (как вариант)</li>
-					</ol>
-				</blockquote>
-			</div>
-		</div><br>
-		<a href="game_start.php"><div class="div_button">Начать игру</div></a><br>
+		<div class="spoiler_hardcore">
+			<input style="width:360px;height:45px;" type="checkbox" tabindex="-1" >
+				<div class="box">
+					<span class=close>Скрыть</span><span class=open>Показать</span>
+					<blockquote class="Untext">
+						Текст под спойлером
+					</blockquote>
+				</div>
+		</div>
+		<div class="spoiler_simple">
+			<label>
+				<input type="checkbox"/>
+				<span class="btn">СПОЙЛЕР</span>
+				<div class="text">
+					Текст под спойлером
+				</div>
+			</label>
+		</div>
+		<br>
+		<a href="game_start.php" class="link_button">Начать игру</a><br>
 		<h1 class="login"><?php echo $login; ?></h1>
-		<a href="../index.php"><div class="div_button_sign_out">Выйти</div></a><br>
+		<a href="../index.php" class="link_button_sign_out">Выйти</a><br>
 	</body>
 </html>

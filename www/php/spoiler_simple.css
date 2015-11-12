@@ -1,0 +1,56 @@
+.spoiler_simple
+{
+display: block;
+}
+.spoiler_simple .btn
+{
+	display: inline-block;
+	border: none;
+	border-radius:4px;
+	-webkit-border-radius:4px;
+	-khtml-border-radius:4px;
+	-moz-border-radius:4px;
+	-o-border-radius:4px;
+	-ms-border-radius:4px;
+	font-size: 14px;
+	padding: 10px 20px;
+	background: #558ed6;
+	color: #fff;
+	cursor: pointer;
+}
+.spoiler_simple input[type=checkbox]
+{
+	display: none;
+	height: 10px;
+}
+.spoiler_simple .text
+{
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin: 12px 0 20px;
+}
+.spoiler_simple input[type=checkbox] ~ .text
+{
+	display: none;
+}
+.spoiler_simple input[type=checkbox]:checked ~ .text
+{
+	display: block;
+}
+.spoiler_simple input[type=checkbox]:checked ~ .btn
+{
+	background: #505050;
+}
+
+/* Пример использования
+<div class="spoiler_simple">
+	<label>
+		<input type="checkbox"/>
+		<span class="btn">СПОЙЛЕР</span>
+		<div class="text">
+			Текст под спойлером
+		</div>
+	</label>
+</div>
+*/

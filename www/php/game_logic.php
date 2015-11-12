@@ -81,38 +81,4 @@
 		$data = htmlspecialchars($data);
 		return $data;
 	}
-	
-	function print_history()
-	{
-		global $history;
-		
-		$n = count($history);
-		while ($n > 0)
-		{
-			$value = $history[$n - 1];
-			echo $n . ". " . substr($value, 0, 4) . ": " .
-				 $value[4] . "<img src=\"../source/bull.png\" width=\"20px\" height=\"25px\"/> " .
-				 $value[5] . "<img src=\"../source/cow.png\" width=\"20px\" height=\"23px\"/><br/>";
-			$n = $n - 1;
-		}
-	}
-	
-	function print_report()
-	{
-		global $error_msg;
-		global $history;
-		global $user_guess;
-		global $bull_count;
-		global $cow_count;
-		
-		if ($error_msg == "")
-		{
-			if (count($history) > 0)
-				echo $user_guess . ": " .
-					 $bull_count . "<img src=\"../source/bull.png\" width=\"36px\" height=\"50px\"/> " .
-					 $cow_count . "<img src=\"../source/cow.png\" width=\"36px\" height=\"42px\"/>";
-		}
-		else
-			echo "<font color=\"red\">" . $error_msg . "</font>";
-	}
 ?>

@@ -15,17 +15,17 @@
 	
 	$retval = mysql_query("UPDATE games_t SET score = $score WHERE game_id = $game_id", $db);
 ?>
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 	<head>
 		<link rel="stylesheet" href="stylesheet.css">
 		<title>Поздравления</title>
 	</head>
-	<body align="center" style="font-size: 30px;">
+	<body style="font-size: 30px; text-align: center;">
 		Поздравляем, вы угадали число! :)<br/>
 		<img src="../source/congratulations.png"/><br/>
 		Вы угадали загаданное число: <?php echo $unknown_number; ?>.<br/>
 		Вы сделали попыток: <?php echo $score; ?>.<br/><br/>
-		<a href="home.php"><div class="div_button">Вернуться на домашнюю страницу</div></a>
+		<a href="home.php" class="link_button">Вернуться на домашнюю страницу</a>
 	</body>
 </html>

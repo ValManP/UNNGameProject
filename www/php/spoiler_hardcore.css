@@ -1,0 +1,81 @@
+.spoiler_hardcore >  input + .box > blockquote
+{
+	display: none;
+}
+.spoiler_hardcore >  input:checked + .box > blockquote
+{
+	display: block;
+}
+.spoiler_hardcore >  input[type="checkbox"]
+{
+	cursor: pointer;
+	border-color:transparent!important;
+	border-style:none!important;
+	background:transparent none!important;
+	position:relative;z-index:1;
+	margin:-10px 0 -30px -230px;
+ }
+.spoiler_hardcore >  input[type="checkbox"]:focus
+{
+	outline:none;
+}
+.spoiler_hardcore span.close, .spoiler_hardcore span.open
+{
+	padding-left:22px;
+	color: #00f!important;
+	text-decoration: underline;
+}
+.spoiler_hardcore >  input +  .box > span.close
+{
+	display: none;
+}
+.spoiler_hardcore >  input:checked +  .box > span.close
+{
+	background: url(../source/minus.png) 4px 60% no-repeat;
+	display: inline;
+}
+.spoiler_hardcore >  input:checked  + .box > span.open {
+	display: none;
+}
+.spoiler_hardcore >  input +  .box >  span.open {
+	background: url(../source/plus.png) 4px  60% no-repeat;
+	display: inline;
+}
+.spoiler_hardcore blockquote, .spoiler_hardcore
+{
+    padding:1em;
+    border-radius:15px;
+    -webkit-border-radius:15px;
+    -khtml-border-radius:15px;
+    -moz-border-radius:15px;
+    -o-border-radius:15px;
+    -ms-border-radius:15px;
+}
+.spoiler_hardcore
+{
+    overflow-x:hidden;
+    box-shadow: 0px 3px 8px #808080;
+    border:#E5E5E5 solid 2px;
+    -webkit-box-shadow:0px 3px 8px #808080;
+    -khtml-box-shadow:0px 3px 8px #808080;
+    -moz-box-shadow:0px 3px 8px #808080;
+    -ms-box-shadow:0px 3px 8px #808080;
+}
+.spoiler_hardcore blockquote
+{
+   margin-top:12px;
+   min-height: 23px;
+   border:#CDCDCD 2px dashed;
+}
+
+/* Пример использования
+<div class="spoiler_hardcore">
+	<input style="width:360px;height:45px;" type="checkbox" tabindex="-1" >
+	<div class="box">
+		<span class=close>Скрыть</span><span class=open>Показать</span>
+		<blockquote class="Untext">
+			Текст под спойлером
+		</blockquote>
+	</div>
+</div>
+*/

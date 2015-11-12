@@ -6,32 +6,54 @@
 		<title>Игра Быки-Коровы</title>
 	</head>
 	<body>
-		<div class="header">
-			<?php echo $unknown_number; ?>
-		</div>
-		<div class="content">
-			<div class="top">
-				<?php print_report(); ?><br/>
+		<div class="wrapper">
+			<div class="header">
+				<?php echo $unknown_number; ?>
 			</div>
-			
-			<div class="middle">
-				<div class="game_form">
-					<form name="guess_form" action="game.php" method="post">
-						<p style="font-size: 30px; font-weight: bold; margin: 0;">Угадать число</p><br/>
-						<input type="text" name="user_guess" maxlength="4" autocomplete="off" class="user_guess"><br/>
-						<input type="submit" value="Угадать"><br/>
-					</form>
-					<form name="give_up" action="give_up.php">
-						<input type="submit" value="Сдаться">
-					</form>
-				</div>
-				<div class="history">
-					<?php print_history(); ?>
-				</div>
-				<div class="clear">
-				</div>
+			<div class="report">
+				<?php if ($error_msg != ""): ?>
+					<p style="color: red; margin: 0;"><?php echo $error_msg; ?></p>
+				<?php else: ?>
+					<?php if (count($history) > 0): ?>
+						<p style="margin: 0;"><?php echo $user_guess; ?>:
+						<?php echo $bull_count; ?><img src="../source/bull.png" width="36px" height="50px"/>
+						<?php echo $cow_count; ?><img src="../source/cow.png" width="36px" height="42px"/></p>
+					<?php endif; ?>
+				<?php endif; ?>
 			</div>
-		</div>
+			<div class="content">
+				<div class="left">
+				</div>
+				
+				<div class="middle">
+				
+					<div class="game_form">
+						<p style="font-size: 30px; font-weight: bold; margin: 0;">Угадать&nbsp;число</p>
+						<form name="guess_form" action="game.php" method="post"><br>	
+							<input type="text" name="user_guess" maxlength="4" autocomplete="off" class="user_guess"><br/>
+							<input type="submit" value="Угадать"><br/>
+						</form>
+						<form name="give_up_form" action="give_up.php">
+							<input type="submit" value="Сдаться">
+						</form>
+					</div>
+
+				</div>
+				
+				<div class="right">
 		
+					<div class="history">
+						<?php $reversed_history = array_reverse($history) ?>
+						<?php foreach ($reversed_history as $key=>$value): ?>
+							<?php echo count($reversed_history) - $key; ?>.
+							<?php echo substr($value, 0, 4); ?>:
+							<?php echo $value[4]; ?><img src="../source/bull.png" width="20px" height="25px"/>
+							<?php echo $value[5]; ?><img src="../source/cow.png" width="20px" height="23px"/><br/>
+						<?php endforeach; ?>
+					</div>
+					
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

@@ -5,52 +5,74 @@
 
 body
 {
+	background: url(../source/background.jpg) no-repeat;
+	background-size: 100%;
 	margin: 0;
 }
 
+.wrapper
+{
+	display: table;
+	
+	width: 100%;
+	height: 100%;
+}
 
 .header
 {
-	width: 960px;
-    height: 100px;
-	background-color: #7DFDFE;
+	display: table-row;
 	
-	margin: 0 auto;
+	height: 100px;
+	background-color: cyan;
+}
+
+.report
+{
+	display: table-row;
+	
+	height: 80px;
+	
+	text-align: center;
+	vertical-align: middle;
+	font-size: 50px;
+	font-weight: bold;
 }
 
 .content
 {
-	width: 960px;
-	margin: 0 auto;
+	display: table;
+	table-layout: fixed;
 }
 
-.top
+.left
 {
-	height: 10%;
+	display: table-cell;
 	
-	text-align: center;
-	font-size: 50px;
-	font-weight: bold;
-	
-	margin: 10px;
+	width: 50%;
 }
 
 .middle
 {
+	display: table-cell;
+	
+	vertical-align: middle;
+}
+
+.right
+{
+	display: table-cell;
+	vertical-align: top;
+	
+	width: 50%;
 }
 
 .game_form
 {
 	border: 2px solid black;
+	background-color: white;
 	
-	width: 222px;
-    margin-left: 354px;
     padding: 13px;
-    float: left;
-}
-
-.game_form > form
-{
+	
 	text-align: center;
 }
 
@@ -84,12 +106,7 @@ body
 	width: 12em;
 	height: 340px;
 	
-	float: right;
-}
-
-.clear
-{
-	clear: both;
+	margin-left: 100px;
 }
 
 input[type="submit"]
@@ -112,12 +129,13 @@ input[type="submit"]:hover
 	background-color: red;
 }
 
-.div_button
+.link_button
 {	
 	border: 2px solid black;
 	
 	background-color: yellow;
 	
+	text-decoration: none;
 	font-size: 20px;
 	font-weight: bold;
 	color: black;
@@ -125,35 +143,19 @@ input[type="submit"]:hover
 	text-align: center;
 	
 	padding: 10px;
-	
-	display: inline-block;
 }
 
-.div_button:hover
+.link_button:hover
 {
 	background-color: red;
 }
 
-.game_form, .user_guess, input[type="submit"], .div_button, .history
+.game_form, .user_guess, input[type="submit"], .link_button, .history
 {
-	border-radius:10px;
-    -webkit-border-radius:10px;
-    -khtml-border-radius:10px;
-    -moz-border-radius:10px;
-    -o-border-radius:10px;
-    -ms-border-radius:10px;
-}
-
-.login
-{	
-	position:absolute;
-    top:15%;
-    left:5%;
-}
-
-.div_button_sign_out
-{	
-	position:absolute;
-    top:25%;
-    left:5%;
+	border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
 }
