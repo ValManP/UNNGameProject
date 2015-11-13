@@ -20,7 +20,7 @@
    <br><br>
    <button id = "login_button" type="submit">Войти</button>	
    <br><br>
-   <a id="ref" href="php/registration.php" >РЕГИСТРАЦИЯ</a>
+   <a class="ref" href="php/registration.php" >РЕГИСТРАЦИЯ</a>
 </form>
 
 

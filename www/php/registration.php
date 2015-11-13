@@ -17,7 +17,8 @@
    <input type="text" required placeholder="Пароль" class="form-control" name="password" autocomplete="off" type="password">
    <br><br>
    <button id = "login_button" type="submit">Зарегестрироваться</button>	
-   
+   <br><br>
+   <a class="ref" href="../index.php" >Вернуться</a>
 </form>
 
 

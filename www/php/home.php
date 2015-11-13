@@ -21,7 +21,7 @@
 		<div class="stat_form">
 			<a href="game_start.php" class="link_button" style="margin-left: 40%;">Начать игру</a><br>
 			<div class="left">
-				<div class="game_stat" style = "width:110px; height:230px;">
+				<div id="style-7" class="game_stat" style = "width:110px; height:230px;">
 					<form id="stat_form" action="home.php" method="post"></form>
 					<?php while ($row = mysql_fetch_array ($result)): ?>
 						<button type="submit" name="game" class="btn" form="stat_form" value="<?php echo $row['game_id']; ?>">Игра <?php echo $row['rank']; ?></button>
@@ -30,7 +30,7 @@
 			</div>
 			
 			<div class="right">
-				<form class="game_stat" action="home.php" style = "width:330px; height:230px; margin-left: 10%;">
+				<div id="style-7" class="game_stat" style = "width:330px; height:230px; margin-left: 10%;">
 				<?php if (isset($game_history)){ ?>
 					<?php echo "Дата: ".$time; ?> <br/>
 					<?php echo "Задуманное число: ".$unknown_number; ?> <br/>
@@ -40,7 +40,7 @@
 							<?php echo substr($row['value'], 4, 1); ?><img src="../source/bull.png" width="20px" height="25px"/>
 							<?php echo substr($row['value'], 5, 1); ?><img src="../source/cow.png" width="20px" height="23px"/><br/>
 					<?php endwhile;} ?>
-				</form>
+				</div>
 			</div>
 			
 		</div>
