@@ -25,10 +25,11 @@
 					<div class="left">
 						<p style="font-size: 24px; margin-bottom: 0;">Игры</p>
 						<div id="style-7" class="game_stat" style = "width:110px; height:230px;">
-							<form id="stat_form" action="home.php" method="post" style="margin: 0;"></form>
-							<?php while ($row = mysql_fetch_array ($result)): ?>
-								<button type="submit" name="game" class="btn" form="stat_form" value="<?php echo $row['game_id']; ?>">Игра <?php echo $row['rank']; ?></button>
-							<?php endwhile; ?>
+							<form name="stat_form" action="home.php" method="post" style="margin: 0;">
+								<?php while ($row = mysql_fetch_array ($result)): ?>
+									<button type="submit" name="game" class="btn" value="<?php echo $row['game_id']; ?>">Игра <?php echo $row['rank']; ?></button>
+								<?php endwhile; ?>
+							</form>
 						</div>
 					</div>
 					
