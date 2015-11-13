@@ -1,5 +1,4 @@
 <?php
-
 	$stat = "";
 	
 	if (!isset($result)) {
@@ -13,7 +12,7 @@
 		if (!empty($_POST['game']))
 		{
 			$game_id = $_POST['game'];
-			echo "hello";
+			echo " from button " . $game_id;
 		}
 	}
 ?>

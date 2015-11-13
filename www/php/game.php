@@ -42,7 +42,7 @@
 				
 				<div class="right">
 		
-					<div class="history">
+					<div class="history" id="style-1">
 						<?php $reversed_history = array_reverse($history) ?>
 						<?php foreach ($reversed_history as $key=>$value): ?>
 							<?php echo count($reversed_history) - $key; ?>.

@@ -9,8 +9,6 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="home.css">
 		<link rel="stylesheet" href="stylesheet.css">
-		<link rel="stylesheet" href="spoiler_simple.css">
-		<!-- <link rel="stylesheet" href="spoiler_hardcore.css"> -->
 		<title>Ваша домашняя страница</title>
 	</head>
 	<body>
@@ -21,14 +19,16 @@
 		</div>
 		
 		<div class="stat_form">
-			<!-- После класса можно изменять индивидуальные свойства элемента: -->
 			<a href="game_start.php" class="link_button" style="margin-left: 40%;">Начать игру</a><br>
 			<div class="left">
 				<div class="game_stat" style = "width:110px; height:230px;">
-						<?php while ($row = mysql_fetch_array ($result)){ ?>
-						<button type="button" class="btn" name="game" value="<?php echo $row['game_id']; ?>">Игра <?php echo $row['game_id']; ?></button><br/><br/>
-						<?php }; ?>
-						<!--<button type="submit" class="btn" name="game" value="1">Игра 1.</button>-->
+					<!-- Кнопки должны сабмитить в какую-то форму, поэтому нужно сделать хотя бы пустую: -->
+					<form id="stat_form" action="home.php" method="post"></form>
+					<?php while ($row = mysql_fetch_array ($result)): ?>
+						<!-- У кнопки нужно указать, к какой форме она привязана, а также тип submit, -->
+						<!-- так как тип button нужен для того, чтобы забить на кнопку JavaScript функцию: -->
+						<button type="submit" name="game" class="btn" form="stat_form" value="<?php echo $row['game_id']; ?>">Игра <?php echo $row['game_id']; ?></button>
+					<?php endwhile; ?>
 				</div>
 			</div>
 			

@@ -99,7 +99,7 @@ body
 	border: 2px solid black;
 	padding: 5px;
 	
-	overflow-y: scroll;
+	overflow-y: auto;
 	background-color: #FFEE67;	
 	font-size: 20px;
 	
@@ -107,6 +107,27 @@ body
 	height: 340px;
 	
 	margin-left: 100px;
+}
+
+#style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar
+{
+	border-radius: 10px;
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
 }
 
 input[type="submit"]
@@ -154,6 +175,8 @@ input[type="submit"]:hover
 
 .game_form, .user_guess, input[type="submit"], .link_button, .history
 {
+	/*opacity: 0.8;*/
+	
 	border-radius: 10px;
     -webkit-border-radius: 10px;
     -khtml-border-radius: 10px;
