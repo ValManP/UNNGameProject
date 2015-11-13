@@ -26,7 +26,8 @@
 			<div class="left">
 				<div class="game_stat" style = "width:110px; height:230px;">
 						<?php while ($row = mysql_fetch_array ($result)){ ?>
-						<?php echo '<button type="submit" class="btn" name="game" value="'.$row['game_id'].'">Игра '.$row['game_id'].'</button><br/><br/>';}?>
+						<button type="button" class="btn" name="game" value="<?php echo $row['game_id']; ?>">Игра <?php echo $row['game_id']; ?></button><br/><br/>
+						<?php }; ?>
 						<!--<button type="submit" class="btn" name="game" value="1">Игра 1.</button>-->
 				</div>
 			</div>
