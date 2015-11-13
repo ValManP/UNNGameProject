@@ -42,7 +42,7 @@
 				
 				<div class="right">
 		
-					<div class="history" id="style-1">
+					<div class="history" id="style-7">
 						<?php $reversed_history = array_reverse($history) ?>
 						<?php foreach ($reversed_history as $key=>$value): ?>
 							<?php echo count($reversed_history) - $key; ?>.
@@ -53,6 +53,9 @@
 					</div>
 					
 				</div>
+			</div>
+			<div class="footer">
+				<div class="copyright">© Румянцев Александр, Поздяев Валерий 2015</div>
 			</div>
 		</div>
 	</body>

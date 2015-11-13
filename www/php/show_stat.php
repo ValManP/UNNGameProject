@@ -17,6 +17,7 @@
 			$score = $game_info['score'];
 
 			$game_history = mysql_query ("SELECT * FROM gametab_t WHERE game_id='$game_id'", $db);
+			$tries = mysql_num_rows($game_history);
 		}
 	}
 ?>

@@ -3,11 +3,17 @@
 	font-family: Comic Sans MS, Arial;
 }
 
+html
+{
+	height: 100%;
+}
+
 body
 {
 	background: url(../source/background.jpg) no-repeat;
 	background-size: 100%;
 	margin: 0;
+	height: 100%;
 }
 
 .wrapper
@@ -42,6 +48,7 @@ body
 {
 	display: table;
 	table-layout: fixed;
+	height: 100%;
 }
 
 .left
@@ -55,7 +62,7 @@ body
 {
 	display: table-cell;
 	
-	vertical-align: middle;
+	vertical-align: top;
 }
 
 .right
@@ -66,12 +73,30 @@ body
 	width: 50%;
 }
 
+.footer
+{
+	display: table-row;
+	height: 1px;
+}
+
+.copyright
+{
+	margin: 0 auto;
+	border-top: 1px solid black;
+	background-color: white;
+	opacity: 0.6;
+	font-size: 14px;
+	
+	text-align: center;
+}
+
 .game_form
 {
 	border: 2px solid black;
 	background-color: white;
 	
     padding: 13px;
+	margin-top: 12px;
 	
 	text-align: center;
 }
@@ -109,25 +134,29 @@ body
 	margin-left: 100px;
 }
 
-#style-1::-webkit-scrollbar-track
+#style-7::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
 	background-color: #F5F5F5;
+	border-radius: 10px;
 }
 
-#style-1::-webkit-scrollbar
+#style-7::-webkit-scrollbar
 {
-	border-radius: 10px;
-	width: 12px;
+	width: 10px;
 	background-color: #F5F5F5;
+	border-radius: 10px;
 }
 
-#style-1::-webkit-scrollbar-thumb
+#style-7::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #555;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(159,97,232)),
+									   color-stop(0.72, rgb(144,64,232)),
+									   color-stop(0.86, rgb(117,12,232)));
 }
 
 input[type="submit"]
@@ -175,7 +204,7 @@ input[type="submit"]:hover
 
 .game_form, .user_guess, input[type="submit"], .link_button, .history
 {
-	/*opacity: 0.8;*/
+	/*opacity: 0.85;*/
 	
 	border-radius: 10px;
     -webkit-border-radius: 10px;
