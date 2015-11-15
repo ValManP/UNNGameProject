@@ -13,13 +13,17 @@
 	</head>
 	<body>
 		<div class="wrapper">
+			<div class="header" style="text-align: center;">
+				<img src="../source/logo.png" width="450"/>
+			</div>
 			<div class="content">
 				<div class="user_form">
-					<img src="../source/avatar.jpg" width="170px" height="170px" id="avatar"/>
+					<img src="../source/empty_avatar.jpg" width="170px" height="170px" id="avatar"/>
 					<h1 class="login"><?php echo $login; ?></h1>
 					<a href="../index.php" class="link_button_sign_out">Выйти</a><br>
 				</div>
-				
+
+
 				<div class="stat_form">
 					<a href="game_start.php" class="link_button" style="margin-left: 40%; margin-bottom: 20px; opacity: 0.7;">Начать игру</a><br>
 					<div class="left">
@@ -33,7 +37,7 @@
 						</div>
 					</div>
 					
-					<div class="middle">
+					<div class="right">
 						<p style="font-size: 24px; margin-bottom: 0; margin-left: 19%;">Информация об игре</p>
 						<div id="style-7" class="game_stat" style = "width:330px; height:230px; margin-left: 10%;">
 						<?php if (isset($game_history)){ ?>

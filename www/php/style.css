@@ -21,7 +21,7 @@ h2 {
 
 .regform {
 	 position:absolute;
-    top:15%;
+    top:5%;
     right:0;
     left:0;
 text-align: center;
@@ -70,11 +70,5 @@ input:focus{
 #login_button:active { background: rgb(152,15,0); } /* при нажатии */
 
 .logo{
-	text-align: center;
-	color:#32CD32;
-	width:559px;
-    height: 290px;
-	line-height: 350px;
 	outline: none;
-	background: url(../source/logo.png);
 }

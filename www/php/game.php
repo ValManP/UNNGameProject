@@ -3,12 +3,12 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="stylesheet.css">
-		<title>Игра Быки-Коровы</title>
+		<title>Игра "Быки и Коровы"</title>
 	</head>
 	<body>
 		<div class="wrapper">
-			<div class="header">
-				<?php echo $unknown_number; ?>
+			<div class="header" style="text-align: center;">
+				<img src="../source/logo.png" width="350"/>
 			</div>
 			<div class="report">
 				<?php if ($error_msg != ""): ?>

@@ -1,5 +1,6 @@
 <?php
 session_start();
+header("Content-Type: text/html; charset=utf-8"); 
 $db = mysql_connect ("bullsandcows", "root", "");
 mysql_select_db("game_db", $db);
 $password = $login = "";

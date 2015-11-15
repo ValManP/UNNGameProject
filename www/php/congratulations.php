@@ -19,7 +19,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="stylesheet.css">
-		<title>Поздравления</title>
+		<title>Поздравляем!</title>
 	</head>
 	<body>
 		<div class="wrapper">

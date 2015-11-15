@@ -1,29 +1,32 @@
+<?php 
+	include "reg.php";
+?>
 <!DOCTYPE HTML> 
 <html>
 	<head>
 		<link rel="stylesheet" href="stylesheet.css">
 		<link rel="stylesheet" href="style.css">
-		<title>Регистрация</title>
+		<title>Р РµРіРёСЃС‚СЂР°С†РёСЏ</title>
 	</head>
-<?php 
-	include "reg.php";
-?>
 	<body>
 		<div class="wrapper">
 			<div class="content">
 				<form class="regform"  method="post" action="registration.php"> 
-					<div class="logo" style="margin-left:35%;"><h1 style="margin-top:-75px;">РЕГИСТРАЦИЯ</h1></div>
-				   <input id = "login" type="text" required placeholder="Логин" class="form-control" name="login" autocomplete="off">
-				   <br><br>
-				   <input type="text" required placeholder="Пароль" class="form-control" name="password" autocomplete="off" type="password">
-				   <br><br>
-				   <button id = "login_button" type="submit">Зарегестрироваться</button>	
-				   <br><br>
-				   <a class="ref" href="../index.php" >Вернуться</a>
+					<div class="logo">
+						<img src="../source/logo.png"/><br/>
+						<h1 style="margin-top: 0;">Р РµРіРёСЃС‚СЂР°С†РёСЏ</h1>
+					</div>
+					<input id = "login" type="text" required placeholder="Р›РѕРіРёРЅ" class="form-control" name="login" autocomplete="off">
+					<br><br>
+					<input type="text" required placeholder="РџР°СЂРѕР»СЊ" class="form-control" name="password" autocomplete="off" type="password">
+					<br><br>
+					<button id = "login_button" type="submit">Р—Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°С‚СЊСЃСЏ</button>	
+					<br><br>
+					<a class="ref" href="../index.php" >Р’РµСЂРЅСѓС‚СЊСЃСЏ</a>
 				</form>
 			</div>
 			<div class="footer">
-				<div class="copyright">© Румянцев Александр, Поздяев Валерий 2015</div>
+				<div class="copyright">В© Р СѓРјСЏРЅС†РµРІ РђР»РµРєСЃР°РЅРґСЂ, РџРѕР·РґСЏРµРІ Р’Р°Р»РµСЂРёР№ 2015</div>
 			</div>
 		</div>
 	</body>

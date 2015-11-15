@@ -1,4 +1,5 @@
-<?php 
+<?php
+header("Content-Type: text/html; charset=utf-8"); 
 $db = mysql_connect ("bullsandcows", "root", "");
 mysql_select_db("game_db", $db);
 
@@ -35,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		}
 		else
 		{
-			echo "<script>alert('User already exist!');</script>";
+			echo "<script>alert('Пользователь с таким именем уже существует!');</script>";
 		}
 	}
 }

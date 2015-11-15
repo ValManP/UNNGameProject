@@ -28,8 +28,7 @@ body
 {
 	display: table-row;
 	
-	height: 100px;
-	background-color: cyan;
+	height: 1px;
 }
 
 .report
