@@ -13,8 +13,7 @@
 		<div class="wrapper">
 			<div class="content">
 				<form class="regform" method="post" action="index.php">
-					<img src="Image URL" alt="Logo"/>
-					<h2>Быки и коровы</h2>
+					<div class="logo" style="margin-left:35%;"><h1 style="margin-top:-75px;">БЫКИ И КОРОВЫ</h1></div>
 					<input id = "login" type="text" required placeholder="Логин" class="form-control" name="login" autocomplete="off">
 					<br><br>
 					<input type="password" required placeholder="Пароль" class="form-control" name="password" autocomplete="off" type="password">

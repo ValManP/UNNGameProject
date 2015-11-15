@@ -12,8 +12,7 @@
 		<div class="wrapper">
 			<div class="content">
 				<form class="regform"  method="post" action="registration.php"> 
-					<img src="Image URL" alt="Logo"/>
-					<h2>Регистрация</h2>
+					<div class="logo" style="margin-left:35%;"><h1 style="margin-top:-75px;">РЕГИСТРАЦИЯ</h1></div>
 				   <input id = "login" type="text" required placeholder="Логин" class="form-control" name="login" autocomplete="off">
 				   <br><br>
 				   <input type="text" required placeholder="Пароль" class="form-control" name="password" autocomplete="off" type="password">

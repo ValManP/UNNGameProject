@@ -15,7 +15,7 @@
 		<div class="wrapper">
 			<div class="content">
 				<div class="user_form">
-					<img src="../source/bull.png" width="120px" height="150px" id="avatar"/>
+					<img src="../source/avatar.jpg" width="170px" height="170px" id="avatar"/>
 					<h1 class="login"><?php echo $login; ?></h1>
 					<a href="../index.php" class="link_button_sign_out">Выйти</a><br>
 				</div>

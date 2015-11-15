@@ -1,7 +1,6 @@
 .error {color: #FF0000;}
 
 h2 {
-	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 30px;
 }
 
@@ -22,7 +21,7 @@ h2 {
 
 .regform {
 	 position:absolute;
-    top:35%;
+    top:15%;
     right:0;
     left:0;
 text-align: center;
@@ -69,3 +68,13 @@ input:focus{
 } 
 #login_button:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
 #login_button:active { background: rgb(152,15,0); } /* при нажатии */
+
+.logo{
+	text-align: center;
+	color:#32CD32;
+	width:559px;
+    height: 290px;
+	line-height: 350px;
+	outline: none;
+	background: url(../source/logo.png);
+}
