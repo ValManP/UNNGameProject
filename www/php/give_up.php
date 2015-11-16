@@ -31,7 +31,7 @@
 				<a href="home.php" class="link_button">Вернуться на домашнюю страницу</a>
 			</div>
 			<div class="footer">
-				<div class="copyright">© Румянцев Александр, Поздяев Валерий 2015</div>
+				<div class="copyright">© Румянцев Александр, Поздяев Валерий ННГУ 2015</div>
 			</div>
 		</div>
 	</body>

@@ -55,8 +55,8 @@
 							<?php $counter = 1; ?>
 							<?php while ($row = mysql_fetch_array ($game_history)): ?>
 									<?php echo $counter.". ".substr($row['value'], 0, 4)." : "; ?>
-									<?php echo substr($row['value'], 4, 1); ?><img src="../source/bull.png" width="20px" height="25px"/>
-									<?php echo substr($row['value'], 5, 1); ?><img src="../source/cow.png" width="20px" height="23px"/><br/>
+									<?php echo substr($row['value'], 4, 1); ?><img src="../source/bull.png" width="20px"/>
+									<?php echo substr($row['value'], 5, 1); ?><img src="../source/cow.png" width="20px"/><br/>
 									<?php $counter += 1; ?>
 							<?php endwhile;} ?>
 						</div>
@@ -64,7 +64,7 @@
 				</div>
 			</div>
 			<div class="footer">
-				<div class="copyright">© Румянцев Александр, Поздяев Валерий 2015</div>
+				<div class="copyright">© Румянцев Александр, Поздяев Валерий ННГУ 2015</div>
 			</div>
 		</div>
 	</body>

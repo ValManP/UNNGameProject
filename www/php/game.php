@@ -16,8 +16,8 @@
 				<?php else: ?>
 					<?php if (count($history) > 0): ?>
 						<p style="margin: 0;"><?php echo $user_guess; ?>:
-						<?php echo $bull_count; ?><img src="../source/bull.png" width="36px" height="50px"/>
-						<?php echo $cow_count; ?><img src="../source/cow.png" width="36px" height="42px"/></p>
+						<?php echo $bull_count; ?><img src="../source/bull.png" width="36px"/>
+						<?php echo $cow_count; ?><img src="../source/cow.png" width="36px"/></p>
 					<?php endif; ?>
 				<?php endif; ?>
 			</div>
@@ -47,15 +47,15 @@
 						<?php foreach ($reversed_history as $key=>$value): ?>
 							<?php echo count($reversed_history) - $key; ?>.
 							<?php echo substr($value, 0, 4); ?>:
-							<?php echo $value[4]; ?><img src="../source/bull.png" width="20px" height="25px"/>
-							<?php echo $value[5]; ?><img src="../source/cow.png" width="20px" height="23px"/><br/>
+							<?php echo $value[4]; ?><img src="../source/bull.png" width="20px"/>
+							<?php echo $value[5]; ?><img src="../source/cow.png" width="20px"/><br/>
 						<?php endforeach; ?>
 					</div>
 					
 				</div>
 			</div>
 			<div class="footer">
-				<div class="copyright">© Румянцев Александр, Поздяев Валерий 2015</div>
+				<div class="copyright">© Румянцев Александр, Поздяев Валерий ННГУ 2015</div>
 			</div>
 		</div>
 	</body>
