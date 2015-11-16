@@ -40,9 +40,9 @@
 					<div class="right">
 						<p style="font-size: 24px; margin-bottom: 0; margin-left: 19%;">Информация об игре</p>
 						<div id="style-7" class="game_stat" style = "width:330px; height:230px; margin-left: 10%;">
-						<?php if (isset($game_history)){ ?>
-							<?php echo "Дата: ".$time; ?> <br/>
-							<?php echo "Задуманное число: ".$unknown_number; ?> <br/>
+						<?php if (isset($game_history)): ?>
+							Дата: <?php echo $time; ?><br/>
+							Задуманное число: <?php echo $unknown_number; ?><br/>
 							<?php if ($score > 0): ?>
 								Вы угадали число!<br/>
 							<?php elseif ($score == 0): ?>
@@ -58,7 +58,8 @@
 									<?php echo substr($row['value'], 4, 1); ?><img src="../source/bull.png" width="20px"/>
 									<?php echo substr($row['value'], 5, 1); ?><img src="../source/cow.png" width="20px"/><br/>
 									<?php $counter += 1; ?>
-							<?php endwhile;} ?>
+							<?php endwhile; ?>
+						<?php endif; ?>
 						</div>
 					</div>
 				</div>

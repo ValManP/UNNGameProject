@@ -161,6 +161,7 @@ body
 input[type="submit"]
 {
 	cursor: pointer;
+	outline: none;
 	
 	background-color: yellow;
 	
