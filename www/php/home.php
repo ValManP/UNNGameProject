@@ -30,9 +30,10 @@
 						<p style="font-size: 24px; margin-bottom: 0;">Игры</p>
 						<div id="style-7" class="game_stat" style = "width:110px; height:230px;">
 							<form name="stat_form" action="home.php" method="post" style="margin: 0;">
-								<?php while ($row = mysql_fetch_array ($result)): ?>
+								<?php for ($number = 1; $row = mysql_fetch_array ($result); $number += 1): ?>
 									<button type="submit" name="game" class="btn" value="<?php echo $row['game_id']; ?>">Игра <?php echo $row['rank']; ?></button>
-								<?php endwhile; ?>
+									<input type="hidden" name="<?php echo $row['game_id']; ?>" value="<?php echo $number; ?>"/>
+								<?php endfor; ?>
 							</form>
 						</div>
 					</div>
@@ -41,6 +42,7 @@
 						<p style="font-size: 24px; margin-bottom: 0; margin-left: 19%;">Информация об игре</p>
 						<div id="style-7" class="game_stat" style = "width:330px; height:230px; margin-left: 10%;">
 						<?php if (isset($game_history)): ?>
+							Игра <?php echo $game_number; ?><br/>
 							Дата: <?php echo $time; ?><br/>
 							Задуманное число: <?php echo $unknown_number; ?><br/>
 							<?php if ($score > 0): ?>

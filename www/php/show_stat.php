@@ -11,6 +11,7 @@
 		if (!empty($_POST['game']))
 		{
 			$game_id = $_POST['game'];
+			$game_number = $_POST["$game_id"];
 			$game_info = mysql_fetch_array (mysql_query ("SELECT * FROM games_t WHERE game_id='$game_id'", $db));
 			$unknown_number = $game_info['unknown_number'];
 			$time = $game_info['time'];
